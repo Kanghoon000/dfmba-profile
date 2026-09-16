@@ -1,6 +1,6 @@
 // Render 배포 후 실제 백엔드 주소로 바꾸고 Vercel에 다시 배포하세요.
 window.APP_CONFIG = {
-  API_BASE_URL: "http://localhost:8000",
+  API_BASE_URL: "https://dfmba-profile-api.onrender.com",
   profile: {
     name: "이강훈",
     affiliation: "KAIST DFMBA 7기",
