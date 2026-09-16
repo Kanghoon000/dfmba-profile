@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="개인 소개와 FastAPI 연동 실습 페이지">
+  <title>개인 소개 | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="config.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 이동</a>
+  <header class="nav"><a class="brand" href="#">MY<span> / </span>SPACE</a><nav aria-label="주 메뉴"><a href="#about">소개</a><a href="#interests">관심 분야</a><a href="#lab">API 실습 <span>↗</span></a></nav></header>
+  <main id="main">
+    <section class="hero">
+      <div><p class="eyebrow"><span class="dot"></span> PERSONAL PORTFOLIO / 2026</p><h1 id="headline">금융과 기술의<br>연결을 탐구합니다.</h1><p class="intro" id="description"></p><div class="hero-actions"><a class="button primary" href="#lab">API 연동 체험하기 <span>↗</span></a><a class="text-link" href="#about">더 알아보기 ↓</a></div></div>
+      <aside class="identity"><div class="card-top"><span>HELLO, WORLD.</span><span>01 / PROFILE</span></div><div class="avatar" id="initials">KH</div><h2 id="name">이강훈</h2><p id="affiliation">KAIST DFMBA 7기</p><div class="card-bottom"><span>Learning. Building. Connecting.</span><span>↗</span></div></aside>
+    </section>
+    <section class="about section" id="about"><div><p class="eyebrow">01 / ABOUT ME</p><h2>배움을 연결하고,<br>가능성을 넓힙니다.</h2></div><div><p id="about-text" class="body-copy"></p><div id="contact" class="contacts"></div></div></section>
+    <section class="section" id="interests"><p class="eyebrow">02 / INTERESTS</p><div class="section-heading"><h2>관심 있는 것들</h2><p>계속해서 배우고 싶은 분야입니다.</p></div><div class="interest-grid" id="interest-list"></div></section>
+    <section class="lab section" id="lab"><p class="eyebrow">03 / LIVE API LAB</p><div class="section-heading"><h2>작은 입력, 실제 연결.</h2><p>이름을 보내면 백엔드가 인사를 돌려줍니다.</p></div><div class="lab-grid"><div class="request"><div class="flow"><span>Browser</span><span>→</span><span>FastAPI</span><span>→</span><span>You</span></div><h3>반가워요, 이름이 어떻게 되세요?</h3><form id="greeting-form"><label for="visitor-name">방문자 이름</label><input id="visitor-name" name="name" maxlength="40" placeholder="예: 홍길동" required autocomplete="given-name"><button id="submit-button" class="button primary" type="submit">인사 요청하기 <span>↗</span></button></form><p class="hint">입력값은 인사 응답에만 사용하며 저장하지 않습니다.</p><a id="swagger-link" class="text-link" target="_blank" rel="noopener noreferrer">Swagger에서 API 보기 ↗</a></div><div class="response"><div class="response-title"><span>SERVER RESPONSE</span><span id="status" class="status" role="status">요청 대기</span></div><p id="result-message" aria-live="polite">서버의 인사가 여기에 표시됩니다.</p><pre id="json-result" aria-label="API JSON 응답">{ "status": "waiting for your hello" }</pre><p id="response-meta" class="hint">실제 API 응답을 확인해 보세요.</p></div></div></section>
+  </main><footer><span id="footer-name">개인 소개 페이지</span><span>HTML · JavaScript · FastAPI</span><a href="#">맨 위로 ↑</a></footer>
+</body>
+</html>
